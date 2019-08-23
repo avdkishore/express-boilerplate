@@ -30,10 +30,15 @@ yarn test
 
 ## APIs availabe
 
+Fetch all the available products
+
 ```curl
 curl -X GET http://localhost:5200/api/v1/products
+```
 
+Get the final price for the products added to checkout
 
+```curl
 curl -X POST http://localhost:5200/api/v1/products/price \
   -H 'Accept: */*' \
   -H 'Content-Type: application/json' \
@@ -41,10 +46,17 @@ curl -X POST http://localhost:5200/api/v1/products/price \
   "customer": "Facebook",
   "items": [{ "type": "medium", "qty": 6 }]
 }'
+```
 
+Get all the available offers for a customer
 
+```curl
 curl -X GET 'http://localhost:5200/api/v1/offers?customer=Facebook'
+```
 
+Create new offer
+
+```curl
 curl -X POST http://localhost:5200/api/v1/offers?auth=true&admin=true \
   -H 'Content-Type: application/json' \
   -d '{
