@@ -5,7 +5,7 @@
 
 module.exports = {
   port: 5200,
-  prefix: '/till-pos',
+  prefix: '/api',
   postgresql: {
     host: process.env.DB_HOST || 'localhost',
     port: process.env.DB_PORT || 5432,
