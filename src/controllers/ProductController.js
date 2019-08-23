@@ -98,7 +98,7 @@ module.exports = {
       if (!offersForCustomer.length) {
         finalPrice = getFinalPrice(items, productPriceMapping);
 
-        return res.ok(finalPrice);
+        return res.ok({ finalPrice });
       }
 
       /** if the customer has offers, calculate the total price including the discount */
@@ -120,7 +120,7 @@ module.exports = {
       // calculate the final price of all the items with updated qty and price
       finalPrice = getFinalPrice(itemsCopy, productPriceMapping);
 
-      return res.ok(finalPrice);
+      return res.ok({ finalPrice });
     } catch (e) {
       return res.serverError(e);
     }

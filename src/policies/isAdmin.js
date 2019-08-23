@@ -10,7 +10,7 @@
 
 module.exports.isAdmin = function isAdmin(req, res, next) {
   const { constants } = config;
-  if (req.query && req.query.isAdmin) return next();
+  if (req.query && req.query.admin) return next();
 
   return res.forbidden({ message: constants.FORBIDDEN });
 };

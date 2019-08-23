@@ -14,7 +14,10 @@ const config = {
   },
   globals: {
     config: true,
-    models: true
+    models: true,
+    sequelize: true,
+    models: true,
+    request: true
   }
 };
 

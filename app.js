@@ -114,5 +114,7 @@ function lower(done) {
 module.exports = {
   lower,
   start,
+  sequelize,
+  models,
   default: app
 };
