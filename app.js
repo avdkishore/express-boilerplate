@@ -46,7 +46,7 @@ app.use((req, res, next) => {
 });
 
 app.use((error, req, res) => {
-  logger.error(error);
+  console.error(error);
 
   res.status(error.status || 500);
   res.json({
@@ -60,7 +60,7 @@ app.use((error, req, res) => {
  */
 const server = http.createServer(app);
 
-const isTest = (process.env.NODE_ENV === 'test');
+const isTest = process.env.NODE_ENV === 'test';
 const isProduction = process.env.NODE_ENV === 'production';
 
 /**
@@ -91,12 +91,7 @@ server.on('error', error => {
 server.on('listening', () => {
   const addr = server.address();
   const bind = typeof addr === 'string' ? `pipe ${addr}` : `port ${addr.port}`;
-  if (process.env.NODE_ENV === 'production') {
-    console.log(`Listening on ${bind}`); // eslint-disable-line no-console
-    /**
-     * Bootstrap the application
-     */
-  }
+  console.log(`Listening on ${bind}`);
 });
 
 function start(done) {

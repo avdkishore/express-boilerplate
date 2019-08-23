@@ -1,4 +1,10 @@
 module.exports = {
+  /**
+   *  Find all the offers available
+   * @param {*} req
+   * @param {*} res
+   * @returns
+   */
   find: async (req, res) => {
     const customer = req.query.customer;
 
