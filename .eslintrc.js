@@ -13,7 +13,8 @@ const config = {
     es6: true
   },
   globals: {
-    config: true
+    config: true,
+    models: true
   }
 };
 
