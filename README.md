@@ -1,4 +1,4 @@
-# Product details and checkout
+# Express boilerplate with Postgresql database using Sequelize ORM.
 
 A simple checkout system written in node.js
 
