@@ -7,13 +7,13 @@ A simple checkout system written in node.js
 * NODE: `>= 10`
 * YARN: `1.9.4`
 * POSTGRES: `9.6`
-* DATABASE: `till_pos_product`, `till_pos_product_test`
+* DATABASE
 
 ## Setup
 
 ```bash
 # clone the project
-git clone https://github.com/avdkishore/pos-checkout.git && cd pos-checkout
+git clone https://github.com/avdkishore/express-boilerplate.git && cd express-boilerplate
 
 # install the dependencies
 yarn
